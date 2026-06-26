@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेरा पर्सनल मीटिंग ऐप</title>
+    
+    <script src="https://meet.jit.si/external_api.js"></script>
+
+    <style>
+        /* CSS: ऐप का लुक और डिज़ाइन */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            margin: 20px 0 10px 0;
+            font-weight: 400;
+        }
+
+        #setup-container {
+            margin-top: 50px;
+            text-align: center;
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* वीडियो स्क्रीन का साइज */
+        #meet-container {
+            width: 90%;
+            height: 70vh;
+            max-width: 1200px;
+            margin-top: 20px;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            display: none; /* शुरू में छुपा रहेगा */
+        }
+
+        /* कंट्रोल्स बटन का एरिया */
+        #control-buttons {
+            margin-top: 15px;
+            display: none; /* शुरू में छुपा रहेगा */
+            gap: 10px;
+        }
+
+        .btn-danger { background-color: #dc3545; }
+        .btn-danger:hover { background-color: #bd2130; }
+        .btn-secondary { background-color: #6c757d; }
+        .btn-secondary:hover { background-color: #5a6268; }
+    </style>
+</head>
+<body>
+
+    <div id="setup-container">
+        <h2>सुरक्षित वीडियो मीटिंग</h2>
+        <p>बिना किसी इंटरफेरेंस के सीधे कनेक्ट होने के लिए नीचे बटन दबाएं</p>
+        <button onclick="startMeeting()">मीटिंग शुरू करें</button>
+    </div>
+
+    <div id="meet-container"></div>
+
+    <div id="control-buttons">
+        <button class="btn-secondary" onclick="toggleAudio()">माइक ऑन/ऑफ़</button>
+        <button class="btn-secondary" onclick="toggleVideo()">कैमरा ऑन/ऑफ़</button>
+        <button class="btn-danger" onclick="hangUp()">मीटिंग छोड़ें</button>
+    </div>
+
+    <script>
+        // JavaScript: ऐप का दिमाग (Jitsi को कंट्रोल करने के लिए)
+        let api = null;
+
+        function startMeeting() {
+            // शुरूआती स्क्रीन को छुपाना और वीडियो कंटेनर को दिखाना
+            document.getElementById('setup-container').style.display = 'none';
+            document.getElementById('meet-container').style.display = 'block';
+            document.getElementById('control-buttons').style.display = 'flex';
+
+            const domain = 'meet.jit.si';
+            const options = {
+                roomName: 'MySecureMeetingRoom_998877', // इसे आप बदल सकते हैं, यही आपका फिक्स रूम लिंक होगा
+                width: '100%',
+                height: '100%',
+                parentNode: document.querySelector('#meet-container'),
+                lang: 'hi', // हिंदी भाषा सपोर्ट के लिए
+                configOverwrite: { 
+                    startWithAudioMuted: false,
+                    startWithVideoMuted: false 
+                },
+                interfaceConfigOverwrite: {
+                    // आप चाहें तो Jitsi के अंदर के डिफ़ॉल्ट बटन छुपा सकते हैं
+                    TOOLBAR_BUTTONS: ['microphone', 'camera', 'chat', 'tileview', 'fullscreen']
+                }
+            };
+
+            // Jitsi मीटिंग लोड करना
+            api = new JitsiMeetExternalAPI(domain, options);
+        }
+
+        // माइक चालू या बंद करने के लिए
+        function toggleAudio() {
+            if (api) api.executeCommand('toggleAudio');
+        }
+
+        // कैमरा चालू या बंद करने के लिए
+        function toggleVideo() {
+            if (api) api.executeCommand('toggleVideo');
+        }
+
+        // मीटिंग बंद करके वापस जाने के लिए
+        function hangUp() {
+            if (api) {
+                api.executeCommand('hangup');
+                // ऐप को वापस पहली स्क्रीन पर ले जाना
+                document.getElementById('meet-container').style.display = 'none';
+                document.getElementById('control-buttons').style.display = 'none';
+                document.getElementById('setup-container').style.display = 'block';
+                api.dispose(); // मेमोरी खाली करना
+            }
+        }
+    </script>
+</body>
+</html>
