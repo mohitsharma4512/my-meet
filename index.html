@@ -1,1 +1,627 @@
-<script>document.write(decodeURIComponent(escape(atob("PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImhpIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+TVNDT1JBTEQgUHJvIC0gWCBSQUxE4oSiPC90aXRsZT4KCiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly91bnBrZy5jb20vbWFwbGlicmUtZ2xAMy42LjIvZGlzdC9tYXBsaWJyZS1nbC5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayBocmVmPSJodHRwczovL3VucGtnLmNvbS9tYXBsaWJyZS1nbEAzLjYuMi9kaXN0L21hcGxpYnJlLWdsLmNzcyIgcmVsPSJzdHlsZXNoZWV0IiAvPgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vdW5wa2cuY29tL0BtYXBsaWJyZS9tYXBsaWJyZS1nbC1nZW9jb2RlckAxLjIuMC9kaXN0L21hcGxpYnJlLWdsLWdlb2NvZGVyLm1pbi5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vdW5wa2cuY29tL0BtYXBsaWJyZS9tYXBsaWJyZS1nbC1nZW9jb2RlckAxLjIuMC9kaXN0L21hcGxpYnJlLWdsLWdlb2NvZGVyLmNzcyIgLz4KCiAgICA8c3R5bGU+CiAgICAgICAgYm9keSB7IG1hcmdpbjogMDsgcGFkZGluZzogMDsgb3ZlcmZsb3c6IGhpZGRlbjsgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjlmYTsgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7IH0KICAgICAgICAjbWFwIHsgcG9zaXRpb246IGFic29sdXRlOyB0b3A6IDA7IGJvdHRvbTogMDsgd2lkdGg6IDEwMCU7IH0KICAgICAgICAKICAgICAgICAubWFwbGlicmVnbC1jdHJsLWF0dHJpYiB7IGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDsgfQoKICAgICAgICAvKiDgpLjgpLDgpY3gpJog4KSs4KS+4KSwICovCiAgICAgICAgLm1hcGxpYnJlZ2wtY3RybC1nZW9jb2RlciB7CiAgICAgICAgICAgIG1hcmdpbi10b3A6IDE1cHggIWltcG9ydGFudDsgbWFyZ2luLWxlZnQ6IDE1cHggIWltcG9ydGFudDsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogMjVweCAhaW1wb3J0YW50OyB3aWR0aDogODUlICFpbXBvcnRhbnQ7CiAgICAgICAgICAgIG1heC13aWR0aDogMzIwcHggIWltcG9ydGFudDsgaGVpZ2h0OiA0MnB4ICFpbXBvcnRhbnQ7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgNHB4IDE1cHggcmdiYSgwLDAsMCwwLjIpICFpbXBvcnRhbnQ7CiAgICAgICAgICAgIGJvcmRlcjogbm9uZSAhaW1wb3J0YW50OwogICAgICAgIH0KCiAgICAgICAgLyog4KSy4KWH4KSv4KSwIOCkleCkguCkn+CljeCksOCli+CksiDgpKHgpL/gpJzgpL7gpIfgpKggKi8KICAgICAgICAubGF5ZXItbWVudSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7IGJhY2tncm91bmQ6IHdoaXRlOyBib3JkZXItcmFkaXVzOiAxMHB4OwogICAgICAgICAgICBwYWRkaW5nOiA1cHg7IGJveC1zaGFkb3c6IDAgNHB4IDEycHggcmdiYSgwLDAsMCwwLjIpOwogICAgICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyBwb3NpdGlvbjogYWJzb2x1dGU7IHJpZ2h0OiAxMHB4OyB0b3A6IDIyMHB4OwogICAgICAgICAgICB6LWluZGV4OiAxMDA7CiAgICAgICAgfQogICAgICAgIC5sYXllci1tZW51LnNob3cgeyBkaXNwbGF5OiBmbGV4OyB9CiAgICAgICAgLm1lbnUtaXRlbSB7IHBhZGRpbmc6IDEwcHggMTVweDsgZm9udC1zaXplOiAxMnB4OyBib3JkZXI6IG5vbmU7IGJhY2tncm91bmQ6IG5vbmU7IHRleHQtYWxpZ246IGxlZnQ7IGN1cnNvcjogcG9pbnRlcjsgYm9yZGVyLXJhZGl1czogNXB4OyB3aGl0ZS1zcGFjZTogbm93cmFwOyB9CiAgICAgICAgLm1lbnUtaXRlbS5hY3RpdmUgeyBiYWNrZ3JvdW5kOiAjZjNlOGZmOyBjb2xvcjogI2E4NTVmNzsgZm9udC13ZWlnaHQ6IGJvbGQ7IH0KCiAgICAgICAgLmJyYW5kLWZvb3RlciB7CiAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsgYm90dG9tOiAwOyB3aWR0aDogMTAwJTsKICAgICAgICAgICAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjg1KTsgdGV4dC1hbGlnbjogY2VudGVyOwogICAgICAgICAgICBwYWRkaW5nOiA1cHggMDsgZm9udC1zaXplOiAxMXB4OyBjb2xvcjogIzIyMjsKICAgICAgICAgICAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDVweCk7IHotaW5kZXg6IDEwOwogICAgICAgIH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+Cgo8ZGl2IGlkPSJtYXAiPjwvZGl2Pgo8ZGl2IGNsYXNzPSJicmFuZC1mb290ZXIiPk1TQ09SQUxEIFBvd2VyZWQgYnkgOi0gPGI+WCBSQUxE4oSiPC9iPjwvZGl2PgoKPHNjcmlwdD4KICAgIGNvbnN0IGxheWVycyA9IHsKICAgICAgICAnc3RyZWV0JzogImh0dHBzOi8vYmFzZW1hcHMuY2FydG9jZG4uY29tL2dsL3ZveWFnZXItZ2wtc3R5bGUvc3R5bGUuanNvbiIsCiAgICAgICAgJ2h5YnJpZCc6IHsKICAgICAgICAgICAgInZlcnNpb24iOiA4LAogICAgICAgICAgICAic291cmNlcyI6IHsgImctc2F0IjogeyAidHlwZSI6ICJyYXN0ZXIiLCAidGlsZXMiOiBbImh0dHBzOi8vbXQxLmdvb2dsZS5jb20vdnQvbHlycz15Jng9e3h9Jnk9e3l9Jno9e3p9Il0sICJ0aWxlU2l6ZSI6IDI1NiB9IH0sCiAgICAgICAgICAgICJsYXllcnMiOiBbeyAiaWQiOiAic2F0IiwgInR5cGUiOiAicmFzdGVyIiwgInNvdXJjZSI6ICJnLXNhdCIgfV0KICAgICAgICB9CiAgICB9OwoKICAgIGNvbnN0IG1hcCA9IG5ldyBtYXBsaWJyZWdsLk1hcCh7CiAgICAgICAgY29udGFpbmVyOiAnbWFwJywKICAgICAgICBzdHlsZTogbGF5ZXJzLnN0cmVldCwKICAgICAgICBjZW50ZXI6IFs3Ny4yMDkwLCAyOC42MTM5XSwKICAgICAgICB6b29tOiAxMiwKICAgICAgICBwaXRjaDogMAogICAgfSk7CgogICAgbGV0IHNlYXJjaE1hcmtlciA9IG5ldyBtYXBsaWJyZWdsLk1hcmtlcih7IGNvbG9yOiAiI2E4NTVmNyIgfSk7CgogICAgLy8g4KS44KSw4KWN4KSaIOCklOCksCDgpJXgpYDgpKzgpYvgpLDgpY3gpKEg4KS54KS+4KSH4KShIOCksuClieCknOCkv+CklQogICAgY29uc3QgZ2VvY29kZXJBcGkgPSB7CiAgICAgICAgZm9yd2FyZEdlb2NvZGU6IGFzeW5jIChjb25maWcpID0+IHsKICAgICAgICAgICAgY29uc3QgZmVhdHVyZXMgPSBbXTsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIGNvbnN0IHVybCA9IGBodHRwczovL25vbWluYXRpbS5vcGVuc3RyZWV0bWFwLm9yZy9zZWFyY2g/cT0ke2VuY29kZVVSSUNvbXBvbmVudChjb25maWcucXVlcnkpfSZmb3JtYXQ9Z2VvanNvbiZsaW1pdD01JmFkZHJlc3NkZXRhaWxzPTEmYWNjZXB0LWxhbmd1YWdlPWhpYDsKICAgICAgICAgICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2godXJsKTsKICAgICAgICAgICAgICAgIGNvbnN0IGdlb2pzb24gPSBhd2FpdCByZXNwb25zZS5qc29uKCk7CiAgICAgICAgICAgICAgICBmb3IgKGNvbnN0IGZlYXR1cmUgb2YgZ2VvanNvbi5mZWF0dXJlcykgewogICAgICAgICAgICAgICAgICAgIGZlYXR1cmVbJ2NlbnRlciddID0gZmVhdHVyZS5nZW9tZXRyeS5jb29yZGluYXRlczsKICAgICAgICAgICAgICAgICAgICBmZWF0dXJlWydwbGFjZV9uYW1lJ10gPSBmZWF0dXJlLnByb3BlcnRpZXMuZGlzcGxheV9uYW1lOwogICAgICAgICAgICAgICAgICAgIGZlYXR1cmVzLnB1c2goZmVhdHVyZSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gY2F0Y2ggKGUpIHsgY29uc29sZS5lcnJvcihlKTsgfQogICAgICAgICAgICByZXR1cm4geyBmZWF0dXJlcyB9OwogICAgICAgIH0KICAgIH07CgogICAgY29uc3QgZ2VvY29kZXIgPSBuZXcgTWFwbGlicmVHZW9jb2RlcihnZW9jb2RlckFwaSwgeyBtYXBsaWJyZWdsOiBtYXBsaWJyZWdsLCBwbGFjZWhvbGRlcjogIuCktuCkueCksCDgpK/gpL4g4KSX4KS+4KSB4KS1IOCkluCli+CknOClh+Ckgi4uLiIsIHpvb206IDE2IH0pOwogICAgbWFwLmFkZENvbnRyb2woZ2VvY29kZXIsICd0b3AtbGVmdCcpOwoKICAgIGdlb2NvZGVyLm9uKCdyZXN1bHQnLCAoZSkgPT4gewogICAgICAgIHNlYXJjaE1hcmtlci5zZXRMbmdMYXQoZS5yZXN1bHQuY2VudGVyKS5hZGRUbyhtYXApOwogICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5tYXBsaWJyZWdsLWN0cmwtZ2VvY29kZXItLWlucHV0JykuYmx1cigpOyAvLyDgpJXgpYDgpKzgpYvgpLDgpY3gpKEg4KSb4KWB4KSq4KS+4KSk4KS+IOCkueCliAogICAgfSk7CgogICAgLy8g4KSV4KSC4KSf4KWN4KSw4KWL4KSy4KWN4KS4CiAgICBtYXAuYWRkQ29udHJvbChuZXcgbWFwbGlicmVnbC5OYXZpZ2F0aW9uQ29udHJvbCh7IHZpc3VhbGl6ZVBpdGNoOiB0cnVlIH0pLCAndG9wLXJpZ2h0Jyk7CiAgICBtYXAuYWRkQ29udHJvbChuZXcgbWFwbGlicmVnbC5GdWxsc2NyZWVuQ29udHJvbCgpLCAndG9wLXJpZ2h0Jyk7CiAgICAKICAgIGNvbnN0IGdlb2xvY2F0ZSA9IG5ldyBtYXBsaWJyZWdsLkdlb2xvY2F0ZUNvbnRyb2woeyBwb3NpdGlvbk9wdGlvbnM6IHsgZW5hYmxlSGlnaEFjY3VyYWN5OiB0cnVlIH0sIHRyYWNrVXNlckxvY2F0aW9uOiB0cnVlIH0pOwogICAgbWFwLmFkZENvbnRyb2woZ2VvbG9jYXRlLCAndG9wLXJpZ2h0Jyk7CgogICAgLy8gM0Qg4KSs4KSf4KSoCiAgICBjbGFzcyBUaHJlZURDb250cm9sIHsKICAgICAgICBvbkFkZChtYXApIHsKICAgICAgICAgICAgdGhpcy5fYnRuID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnYnV0dG9uJyk7CiAgICAgICAgICAgIHRoaXMuX2J0bi5jbGFzc05hbWUgPSAnbWFwbGlicmVnbC1jdHJsLWljb24nOwogICAgICAgICAgICB0aGlzLl9idG4udGV4dENvbnRlbnQgPSAnM0QnOwogICAgICAgICAgICB0aGlzLl9idG4uc3R5bGUuZm9udFdlaWdodCA9ICdib2xkJzsKICAgICAgICAgICAgdGhpcy5fYnRuLm9uY2xpY2sgPSAoKSA9PiBtYXAuZWFzZVRvKHsgcGl0Y2g6IG1hcC5nZXRQaXRjaCgpID4gMCA/IDAgOiA2MCB9KTsKICAgICAgICAgICAgdGhpcy5fY29udGFpbmVyID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7CiAgICAgICAgICAgIHRoaXMuX2NvbnRhaW5lci5jbGFzc05hbWUgPSAnbWFwbGlicmVnbC1jdHJsIG1hcGxpYnJlZ2wtY3RybC1ncm91cCc7CiAgICAgICAgICAgIHRoaXMuX2NvbnRhaW5lci5hcHBlbmRDaGlsZCh0aGlzLl9idG4pOwogICAgICAgICAgICByZXR1cm4gdGhpcy5fY29udGFpbmVyOwogICAgICAgIH0KICAgIH0KICAgIG1hcC5hZGRDb250cm9sKG5ldyBUaHJlZURDb250cm9sKCksICd0b3AtcmlnaHQnKTsKCiAgICAvLyDgpLLgpYfgpK/gpLAg4KSV4KSC4KSf4KWN4KSw4KWL4KSyIOCkteCkvuCkquCkuCDgpJzgpYvgpZzgpL4g4KSX4KSv4KS+CiAgICBjbGFzcyBMYXllck1lbnVDb250cm9sIHsKICAgICAgICBvbkFkZChtYXApIHsKICAgICAgICAgICAgdGhpcy5fY29udGFpbmVyID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7CiAgICAgICAgICAgIHRoaXMuX2NvbnRhaW5lci5jbGFzc05hbWUgPSAnbWFwbGlicmVnbC1jdHJsJzsKICAgICAgICAgICAgdGhpcy5fY29udGFpbmVyLmlubmVySFRNTCA9IGAKICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9ImxheWVyVG9nZ2xlIiBzdHlsZT0iYmFja2dyb3VuZDp3aGl0ZTsgYm9yZGVyOm5vbmU7IHdpZHRoOjMycHg7IGhlaWdodDozMnB4OyBib3JkZXItcmFkaXVzOjhweDsgY3Vyc29yOnBvaW50ZXI7IGJveC1zaGFkb3c6MCAycHggOHB4IHJnYmEoMCwwLDAsMC4yKTsgZGlzcGxheTpmbGV4OyBhbGlnbi1pdGVtczpjZW50ZXI7IGp1c3RpZnktY29udGVudDpjZW50ZXI7Ij4KICAgICAgICAgICAgICAgICAgICA8c3ZnIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiPjxwb2x5Z29uIHBvaW50cz0iMTIgMiAyIDcgMTIgMTIgMjIgNyAxMiAyIj48L3BvbHlnb24+PHBvbHlsaW5lIHBvaW50cz0iMiAxNyAxMiAyMiAyMiAxNyI+PC9wb2x5bGluZT48cG9seWxpbmUgcG9pbnRzPSIyIDEyIDEyIDE3IDIyIDEyIj48L3BvbHlsaW5lPjwvc3ZnPgogICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJsYXllci1tZW51IiBpZD0ibGF5ZXJNZW51Ij4KICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJtZW51LWl0ZW0gYWN0aXZlIiBkYXRhLXN0eWxlPSJzdHJlZXQiPlN0cmVldCBWaWV3PC9idXR0b24+CiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz0ibWVudS1pdGVtIiBkYXRhLXN0eWxlPSJoeWJyaWQiPlNhdGVsbGl0ZSBWaWV3PC9idXR0b24+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgYDsKICAgICAgICAgICAgcmV0dXJuIHRoaXMuX2NvbnRhaW5lcjsKICAgICAgICB9CiAgICB9CiAgICBtYXAuYWRkQ29udHJvbChuZXcgTGF5ZXJNZW51Q29udHJvbCgpLCAndG9wLXJpZ2h0Jyk7CgogICAgLy8g4KSy4KWH4KSv4KSwIOCkrOCkn+CkqCDgpJXgpYAg4KSr4KSC4KSV4KWN4KS24KSo4KSy4KS/4KSf4KWACiAgICBzZXRUaW1lb3V0KCgpID0+IHsKICAgICAgICBjb25zdCB0b2dnbGVCdG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbGF5ZXJUb2dnbGUnKTsKICAgICAgICBjb25zdCBtZW51ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2xheWVyTWVudScpOwogICAgICAgIGNvbnN0IGl0ZW1zID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLm1lbnUtaXRlbScpOwoKICAgICAgICB0b2dnbGVCdG4ub25jbGljayA9IChlKSA9PiB7IG1lbnUuY2xhc3NMaXN0LnRvZ2dsZSgnc2hvdycpOyBlLnN0b3BQcm9wYWdhdGlvbigpOyB9OwogICAgICAgIGl0ZW1zLmZvckVhY2goaXRlbSA9PiB7CiAgICAgICAgICAgIGl0ZW0ub25jbGljayA9ICgpID0+IHsKICAgICAgICAgICAgICAgIG1hcC5zZXRTdHlsZShsYXllcnNbaXRlbS5nZXRBdHRyaWJ1dGUoJ2RhdGEtc3R5bGUnKV0pOwogICAgICAgICAgICAgICAgaXRlbXMuZm9yRWFjaChpID0+IGkuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJykpOwogICAgICAgICAgICAgICAgaXRlbS5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgICAgICAgICAgICAgIG1lbnUuY2xhc3NMaXN0LnJlbW92ZSgnc2hvdycpOwogICAgICAgICAgICB9OwogICAgICAgIH0pOwogICAgICAgIHdpbmRvdy5vbmNsaWNrID0gKCkgPT4gbWVudS5jbGFzc0xpc3QucmVtb3ZlKCdzaG93Jyk7CiAgICB9LCA1MDApOwoKPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo="))));</script>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSCORALD Pro - X RALD™</title>
+
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; background-color: #f8f9fa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        
+        .maplibregl-ctrl-attrib { display: none !important; }
+
+        /* कस्टमाइज्ड सर्च कंटेनर */
+        .search-container {
+            position: absolute; top: 15px; left: 15px; z-index: 100;
+            width: 85%; max-width: 360px; display: flex; flex-direction: column;
+        }
+        .search-input-box {
+            width: 100%; height: 48px; border-radius: 24px; border: 1px solid #ccc;
+            padding: 0 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            background: white; font-size: 15px; box-sizing: border-box; outline: none;
+        }
+
+        /* सजेशन ड्रॉपडाउन */
+        .suggestions-list {
+            background: white; width: 100%; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); z-index: 1000;
+            display: none; flex-direction: column; margin-top: 5px;
+            max-height: 240px; overflow-y: auto; border: 1px solid #e0e0e0;
+        }
+        .suggestion-item {
+            padding: 12px 18px; font-size: 14px; color: #222;
+            cursor: pointer; border-bottom: 1px solid #f1f3f4; text-align: left;
+        }
+        .suggestion-item:hover { background: #e8f0fe; color: #1a73e8; }
+
+        /* गोल कंट्रोल बटन */
+        .control-container {
+            position: absolute; top: 15px; right: 15px;
+            display: flex; flex-direction: column; gap: 10px; z-index: 101;
+        }
+        .ctrl-box {
+            background: white; border-radius: 50%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.16);
+            width: 46px; height: 46px; display: flex;
+            align-items: center; justify-content: center;
+            cursor: pointer; transition: transform 0.1s, background 0.2s;
+            border: 1px solid #dcdcdc;
+        }
+        .ctrl-box:hover { background: #f1f3f4; transform: scale(1.05); }
+        .ctrl-box.active { background: #e8f0fe; border-color: #1a73e8; }
+
+        /* लेयर ड्रॉपडाउन */
+        .layer-dropdown {
+            display: none; background: white; border-radius: 12px;
+            padding: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            flex-direction: column; position: absolute; right: 65px; top: 320px;
+            z-index: 102; min-width: 170px; gap: 6px; border: 1px solid #ccc;
+        }
+        .layer-dropdown.show { display: flex; }
+        .menu-item { 
+            display: flex; align-items: center; gap: 10px; padding: 8px 12px; font-size: 13.5px; 
+            border: none; background: none; text-align: left; cursor: pointer; border-radius: 6px; color: #333; font-weight: 500; width: 100%;
+        }
+        .menu-item:hover { background: #f5f5f5; }
+        .menu-item.active { background: #e8f0fe; color: #1a73e8; font-weight: bold; }
+        .layer-preview { width: 26px; height: 26px; border-radius: 4px; border: 1px solid #aaa; background-size: cover; background-position: center; }
+
+        /* रेस्पॉन्सिव डार्क ब्लैक वॉटरमार्क */
+        .mscorald-watermark {
+            position: absolute; bottom: 12px; left: 12px;
+            font-size: 22px; font-weight: 900; color: #000000;
+            letter-spacing: -0.5px; z-index: 5; text-shadow: 0px 1px 2px rgba(255,255,255,0.9);
+            user-select: none;
+        }
+        @media(max-width: 480px) {
+            .mscorald-watermark { font-size: 16px; bottom: 8px; left: 8px; }
+        }
+
+        /* डिटेल्स इन्फो पैनल */
+        .info-panel {
+            position: absolute; bottom: -450px; right: 15px; width: 340px; max-height: 380px;
+            background: #ffffff; box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+            border-radius: 12px; transition: bottom 0.3s ease; z-index: 99;
+            box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .info-panel.open { bottom: 20px; }
+        .panel-content { padding: 20px; overflow-y: auto; flex: 1; }
+        .panel-header-box { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .panel-title { font-size: 19px; font-weight: bold; color: #222; margin: 0; }
+        .close-panel-btn { background: #f1f3f4; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; }
+        
+        .panel-image { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; background: #e8eaed; display: none; }
+        .panel-desc { font-size: 13.5px; color: #444; line-height: 1.5; margin: 0 0 12px 0; text-align: justify; }
+        
+        .action-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+        .btn-style {
+            display: inline-flex; align-items: center; justify-content: center;
+            border: none; border-radius: 20px; padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.15); transition: 0.2s;
+        }
+        .direction-btn { background: #1a73e8; color: white; }
+        .translate-btn { background: #f1f3f4; color: #1a73e8; border: 1px solid #dcdcdc; }
+
+        /* रूटिंग इनपुट बॉक्स */
+        .routing-box {
+            position: absolute; top: 75px; left: 15px; background: white; padding: 15px;
+            border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); z-index: 98;
+            width: 330px; display: none; flex-direction: column; gap: 8px; border: 1px solid #ccc;
+        }
+        .routing-container { position: relative; width: 100%; display: flex; flex-direction: column; }
+        .routing-box input { width: 100%; padding: 10px 14px; border: 1px solid #dadce0; border-radius: 20px; font-size: 13.5px; box-sizing: border-box; outline: none; }
+        .routing-box button { background: #1a73e8; color: white; border: none; padding: 10px; border-radius: 20px; cursor: pointer; font-weight: bold; margin-top: 5px; }
+        .route-close { align-self: flex-end; background: none; border: none; cursor: pointer; font-size: 14px; color: #5f6368; }
+
+        /* बॉटम राइट रिज़ल्ट बॉक्स */
+        .bottom-right-result {
+            position: absolute; bottom: 20px; right: 75px; background: white;
+            padding: 15px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            z-index: 99; width: 300px; display: none; flex-direction: column; gap: 6px;
+            max-height: 340px; overflow-y: auto; border: 1px solid #e0e0e0;
+        }
+        .mode-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #444; border-bottom: 1px solid #f1f3f4; padding: 6px 0; }
+        .mode-name-box { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #222; }
+        .mode-name-box svg { fill: #5f6368; width: 16px; height: 16px; }
+
+        .apple-pin { cursor: pointer; filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4)); }
+
+        @media(max-width: 768px) {
+            .info-panel { left: 15px; right: 15px; width: auto; bottom: -450px; }
+            .bottom-right-result { left: 15px; right: 15px; width: auto; bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+<div class="mscorald-watermark">MSCORALD</div>
+
+<div class="search-container">
+    <input type="text" id="mainSearchInput" class="search-input-box" placeholder="Search city, town or village..." autocomplete="off">
+    <div id="mainSearchSuggest" class="suggestions-list"></div>
+</div>
+
+<div class="routing-box" id="routingBox">
+    <button class="route-close" onclick="toggleRouteBox(false)">✕ Close</button>
+    <div class="routing-container">
+        <input type="text" id="startLoc" placeholder="Starting Point (e.g. Pune)" autocomplete="off">
+        <div id="startSuggest" class="suggestions-list"></div>
+    </div>
+    <div class="routing-container">
+        <input type="text" id="endLoc" placeholder="Destination (e.g. Lucknow)" autocomplete="off">
+        <div id="endSuggest" class="suggestions-list"></div>
+    </div>
+    <button onclick="calculateRoute()">Find Route & Distance</button>
+</div>
+
+<div class="bottom-right-result" id="bottomRightResult">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <span id="routeTitleHeader" style="font-weight:bold; font-size:14px; color:#1a73e8;">Route Details</span>
+        <button style="border:none; background:none; cursor:pointer; font-weight:bold; font-size: 14px; color: #ff3b30;" onclick="clearRoute()">✕</button>
+    </div>
+    <div id="totalDistance" style="font-size:14px; font-weight:bold; color:#222; margin-bottom:4px;"></div>
+    <div id="modesContainer"></div>
+</div>
+
+<div class="info-panel" id="infoPanel">
+    <div class="panel-content">
+        <div class="panel-header-box">
+            <h3 class="panel-title" id="placeTitle">Location Name</h3>
+            <button class="close-panel-btn" id="closePanel">✕</button>
+        </div>
+        <img class="panel-image" id="placeImage" src="" alt="Place Image">
+        <p class="panel-desc" id="placeDesc">Loading description...</p>
+        
+        <div class="action-row">
+            <button class="btn-style direction-btn" id="directionBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="margin-right:6px;"><path d="M22.43 10.57L13.43 1.57c-.78-.78-2.05-.78-2.83 0L1.57 10.57c-.78.78-.78 2.05 0 2.83l9 9c.78.78 2.05.78 2.83 0l9-9c.78-.79.78-2.05 0-2.83zm-10.43 7.43v-3c-4.42 0-7.3 1.42-9.5 4.5 1-4.5 3.6-9 9.5-9.83v-3.17l5 5.5-5 5.5z"/></svg>
+                Directions
+            </button>
+            <button class="btn-style translate-btn" id="translateBtn">Translate to Hindi</button>
+        </div>
+    </div>
+</div>
+
+<div class="control-container">
+    <div class="ctrl-box" title="Zoom In" id="btnZoomIn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+    </div>
+    <div class="ctrl-box" title="Zoom Out" id="btnZoomOut">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+    </div>
+    <div class="ctrl-box" title="Reset North" id="btnCompass">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <polygon points="12,2 16,12 12,9" fill="#ff3b30"/>
+            <polygon points="12,22 16,12 12,9" fill="#1a73e8"/>
+            <polygon points="12,2 8,12 12,9" fill="#e0241b"/>
+            <polygon points="12,22 8,12 12,9" fill="#1557b0"/>
+        </svg>
+    </div>
+    <div class="ctrl-box" title="Fullscreen" id="btnFull">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+    </div>
+    <div class="ctrl-box" title="My Location" id="btnLoc">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" style="transform: rotate(25deg);"><polygon points="12 2 19 21 12 17 5 21 12 2"></polygon></svg>
+    </div>
+    <div class="ctrl-box" title="Route Mode" id="btnRoute">
+        <g id="routeIconG">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19v-4a4 4 0 0 1 4-4h10" />
+                <polyline points="14 7 18 11 14 15" />
+            </svg>
+        </g>
+    </div>
+    <div class="ctrl-box" title="3D View" id="btn3D">
+        <span style="font-size:13px; font-weight:bold; color:#222;">3D</span>
+    </div>
+    <div class="ctrl-box" title="Map Layers" id="btnLayers">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+    </div>
+</div>
+
+<div class="layer-dropdown" id="layerDropdown">
+    <button class="menu-item active" data-style="street">
+        <div class="layer-preview" style="background-image: url('https://basemaps.cartocdn.com/rastertiles/voyager/15/23396/14942.png')"></div>
+        Street View
+    </button>
+    <button class="menu-item" data-style="satellite">
+        <div class="layer-preview" style="background-image: url('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/15/14942/23396')"></div>
+        Satellite HD
+    </button>
+    <button class="menu-item" data-style="hybrid">
+        <div class="layer-preview" style="background-image: url('https://stamen-tiles.a.ssl.fastly.net/terrain/15/23396/14942.png')"></div>
+        Hybrid View
+    </button>
+</div>
+
+<script>
+    let englishText = "";
+    let hindiText = "";
+    let isHindi = false;
+    let currentPlaceName = "";
+    let currentRouteGeoJSON = null;
+    let directionActive = false;
+
+    const svgIcons = {
+        walk: `<svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 7.3V13h2V9.3l1.8-.4z"/></svg>`,
+        cycle: `<svg viewBox="0 0 24 24"><path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5S3.1 13.5 5 13.5s3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm14-8.5c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm-9.5-6l3.2-5.1c.4-.6 1-1 1.8-1h4.5v2h-4.5l-2.2 3.5 2.7 2.7c.4.4.6.9.6 1.4v3.5h-2v-3.2l-2.5-2.5-2.7 4.3-1.7-1 3.5-5.6z"/></svg>`,
+        bike: `<svg viewBox="0 0 24 24"><path d="M19.5 12c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-15-7C2 12 0 14 0 16.5S2 21 4.5 21 9 19 9 16.5 7 12 4.5 12zm0 7C3.1 19 2 17.9 2 16.5S3.1 14 4.5 14 7 15.1 7 16.5 5.9 19 4.5 19zm10.7-5.5l-2-3.5H9v-2h5.2l1.5 2.7 2.8-1.5.7 1.7-4.5 2.6zM12.5 4c.8 0 1.5.7 1.5 1.5S13.3 7 12.5 7 11 6.3 11 5.5 11.7 4 12.5 4z"/></svg>`,
+        car: `<svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>`,
+        bus: `<svg viewBox="0 0 24 24"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 11H6V6h12v5z"/></svg>`,
+        train: `<svg viewBox="0 0 24 24"><path d="M12 2c-4.42 0-8 .5-8 4v10.5C4 18.43 5.57 20 7.5 20l-1.5 1.5v.5h12v-.5L16.5 20c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4zm0 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-5H6V6h12v5z"/></svg>`,
+        flight: `<svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5l7 2.5z"/></svg>`
+    };
+
+    const layers = {
+        'street': "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+        'satellite': {
+            "version": 8,
+            "sources": { "esri-sat": { "type": "raster", "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], "tileSize": 256 } },
+            "layers": [{ "id": "sat", "type": "raster", "source": "esri-sat" }]
+        },
+        'hybrid': {
+            "version": 8,
+            "sources": {
+                "esri-sat-base": { "type": "raster", "tiles": ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"], "tileSize": 256 },
+                "osm-labels": { "type": "raster", "tiles": ["https://b.ashbu.net/seamark/{z}/{x}/{y}.png"], "tileSize": 256 }
+            },
+            "layers": [
+                { "id": "sat-base", "type": "raster", "source": "esri-sat-base" },
+                { "id": "labels", "type": "raster", "source": "osm-labels" }
+            ]
+        }
+    };
+
+    const map = new maplibregl.Map({
+        container: 'map',
+        style: layers.street,
+        center: [77.2090, 28.6139],
+        zoom: 14.5,
+        maxZoom: 16.5,
+        fadeDuration: 80
+    });
+
+    map.on('load', () => {
+        // रास्तों को गहरा पीला और विज़ुअल को Yandex स्टाइल में कस्टमाइज़ करना
+        if (map.getLayer('road_primary') || map.getLayer('road_major')) {
+            const roadLayers = ['road_primary', 'road_secondary', 'road_tertiary', 'road_major_motorway'];
+            roadLayers.forEach(layerId => {
+                if (map.getLayer(layerId)) {
+                    map.setPaintProperty(layerId, 'line-color', '#fbc02d'); // डार्क गहरा पीला रंग
+                    map.setPaintProperty(layerId, 'line-width', 4);
+                }
+            });
+        }
+
+        // शहरों और जिलों के नाम (Labels) को साफ़, गहरा ब्लैक और बड़ा करना
+        const labelLayers = ['place_city', 'place_town', 'place_district', 'place_label'];
+        labelLayers.forEach(layerId => {
+            if (map.getLayer(layerId)) {
+                map.setPaintProperty(layerId, 'text-color', '#000000'); // डार्क ब्लैक
+                map.setPaintProperty(layerId, 'text-halo-color', '#ffffff');
+                map.setPaintProperty(layerId, 'text-halo-width', 2);
+                map.setLayoutProperty(layerId, 'text-size', 15); // फॉन्ट का आकार बड़ा किया गया
+            }
+        });
+
+        if (map.getLayer('building')) {
+            map.setPaintProperty('building', 'fill-color', '#cfd8dc');
+            map.setPaintProperty('building', 'fill-opacity', 0.9);
+        }
+        
+        map.addLayer({
+            'id': '3d-buildings',
+            'source': 'composite',
+            'source-layer': 'building',
+            'type': 'fill-extrusion',
+            'minzoom': 13,
+            'maxzoom': 16.5,
+            'paint': {
+                'fill-extrusion-color': '#e0e0e0',
+                'fill-extrusion-height': ['get', 'render_height'],
+                'fill-extrusion-base': ['get', 'render_min_height'],
+                'fill-extrusion-opacity': 0.85
+            }
+        });
+    });
+
+    const markerEl = document.createElement('div');
+    markerEl.className = 'apple-pin';
+    markerEl.innerHTML = `
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C7.58 2 4 5.58 4 10C4 15.25 12 22 12 22C12 22 20 15.25 20 10C20 5.58 16.42 2 12 2Z" fill="#ff3b30"/>
+            <circle cx="12" cy="10" r="3.5" fill="#ffffff"/>
+        </svg>
+    `;
+    let searchMarker = new maplibregl.Marker({ element: markerEl });
+
+    setupAutocomplete(document.getElementById('mainSearchInput'), document.getElementById('mainSearchSuggest'), true);
+    setupAutocomplete(document.getElementById('startLoc'), document.getElementById('startSuggest'), false);
+    setupAutocomplete(document.getElementById('endLoc'), document.getElementById('endSuggest'), false);
+
+    function setupAutocomplete(inputEl, suggestEl, isMainSearch = false) {
+        let debounceTimer;
+        inputEl.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const query = inputEl.value.trim();
+            if (query.length < 1) { suggestEl.style.display = 'none'; return; }
+
+            debounceTimer = setTimeout(async () => {
+                try {
+                    const res = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=6&addressdetails=1`);
+                    const data = await res.json();
+                    suggestEl.innerHTML = "";
+                    if(data.length > 0) {
+                        suggestEl.style.display = 'flex';
+                        data.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'suggestion-item';
+                            div.textContent = item.display_name;
+                            div.onclick = () => {
+                                inputEl.value = item.display_name;
+                                suggestEl.style.display = 'none';
+                                
+                                if (isMainSearch) {
+                                    const lon = parseFloat(item.lon);
+                                    const lat = parseFloat(item.lat);
+                                    map.flyTo({ center: [lon, lat], zoom: 16.0 });
+                                    searchMarker.setLngLat([lon, lat]).addTo(map);
+                                    
+                                    currentPlaceName = item.address.city || item.address.town || item.address.village || item.address.state || item.name;
+                                    fetchWikipediaAndImage(currentPlaceName);
+                                }
+                            };
+                            suggestEl.appendChild(div);
+                        });
+                    } else { suggestEl.style.display = 'none'; }
+                } catch(e) { console.error(e); }
+            }, 100);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target !== inputEl) suggestEl.style.display = 'none';
+        });
+    }
+
+    async function fetchWikipediaAndImage(place) {
+        const panel = document.getElementById('infoPanel');
+        const title = document.getElementById('placeTitle');
+        const desc = document.getElementById('placeDesc');
+        const img = document.getElementById('placeImage');
+        const transBtn = document.getElementById('translateBtn');
+
+        title.textContent = place;
+        desc.textContent = "Loading info from Wikipedia...";
+        img.style.display = 'none';
+        panel.classList.add('open');
+        isHindi = false;
+        transBtn.textContent = "Translate to Hindi";
+        hindiText = ""; 
+
+        try {
+            const wikiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(place)}`;
+            const res = await fetch(wikiUrl);
+            const data = await res.json();
+            englishText = data.extract || "Description not found on Wikipedia.";
+            desc.textContent = englishText;
+
+            if (data.originalimage && data.originalimage.source) {
+                img.src = data.originalimage.source;
+                img.style.display = 'block';
+            }
+        } catch(e) { desc.textContent = "Error loading data."; }
+    }
+
+    document.getElementById('translateBtn').onclick = async () => {
+        const desc = document.getElementById('placeDesc');
+        const transBtn = document.getElementById('translateBtn');
+        if (isHindi) {
+            desc.textContent = englishText; transBtn.textContent = "Translate to Hindi"; isHindi = false;
+        } else {
+            if (hindiText) { desc.textContent = hindiText; transBtn.textContent = "Show in English"; isHindi = true; return; }
+            transBtn.textContent = "Translating...";
+            try {
+                const hiWikiUrl = `https://hi.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(currentPlaceName)}`;
+                const res = await fetch(hiWikiUrl);
+                const data = await res.json();
+                hindiText = data.extract || "क्षमा करें, इस स्थान का अनुवाद उपलब्ध नहीं है।";
+                desc.textContent = hindiText; transBtn.textContent = "Show in English"; isHindi = true;
+            } catch(e) { desc.textContent = "Translation failed."; transBtn.textContent = "Translate to Hindi"; }
+        }
+    };
+
+    function toggleRouteBox(show, destName = "") {
+        const box = document.getElementById('routingBox');
+        box.style.display = show ? 'flex' : 'none';
+        if (show && destName) document.getElementById('endLoc').value = destName;
+    }
+
+    document.getElementById('directionBtn').onclick = () => {
+        toggleRouteBox(true, currentPlaceName);
+        document.getElementById('infoPanel').classList.remove('open');
+    };
+
+    function drawRouteOnMap() {
+        if (!currentRouteGeoJSON) return;
+        if (map.getSource('route')) {
+            map.getSource('route').setData(currentRouteGeoJSON);
+        } else {
+            map.addSource('route', { 'type': 'geojson', 'data': currentRouteGeoJSON });
+            map.addLayer({
+                'id': 'route', 'type': 'line', 'source': 'route',
+                'layout': { 'line-join': 'round', 'line-cap': 'round' },
+                'paint': { 'line-color': '#1a73e8', 'line-width': 6, 'line-opacity': 0.85 }
+            });
+        }
+    }
+
+    map.on('style.data', () => { drawRouteOnMap(); });
+
+    async function calculateRoute() {
+        const start = document.getElementById('startLoc').value;
+        const end = document.getElementById('endLoc').value;
+        const resultCard = document.getElementById('bottomRightResult');
+        const distDiv = document.getElementById('totalDistance');
+        const modesContainer = document.getElementById('modesContainer');
+        const routeHeader = document.getElementById('routeTitleHeader');
+        
+        if (!start || !end) return alert("कृपया दोनों स्थान दर्ज करें!");
+
+        searchMarker.remove(); 
+        document.getElementById('infoPanel').classList.remove('open');
+        document.getElementById('mainSearchInput').value = "";
+
+        toggleRouteBox(false);
+        resultCard.style.display = "flex";
+        distDiv.textContent = "Calculating route...";
+        modesContainer.innerHTML = "";
+
+        const startClean = start.split(',')[0].trim();
+        const endClean = end.split(',')[0].trim();
+        routeHeader.innerHTML = `${startClean} &#10142; ${endClean}`;
+
+        try {
+            const startRes = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(start)}&format=json&limit=1`);
+            const startData = await startRes.json();
+            const endRes = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(end)}&format=json&limit=1`);
+            const endData = await endRes.json();
+
+            if (!startData.length || !endData.length) { distDiv.textContent = "स्थान नहीं मिला।"; return; }
+
+            const osrmUrl = `https://router.project-osrm.org/route/v1/driving/${startData[0].lon},${startData[0].lat};${endData[0].lon},${endData[0].lat}?overview=full&geometries=geojson`;
+            const routeRes = await fetch(osrmUrl);
+            const routeData = await routeRes.json();
+
+            if (!routeData.routes || !routeData.routes.length) { distDiv.textContent = "रास्ता नहीं मिला।"; return; }
+
+            const distanceKm = parseFloat((routeData.routes[0].distance / 1000).toFixed(1));
+            distDiv.textContent = `Total Distance: ${distanceKm} KM`;
+
+            const formats = [
+                { name: "Walking", speed: 5, icon: svgIcons.walk },
+                { name: "Bicycle", speed: 15, icon: svgIcons.cycle },
+                { name: "Bike / Moto", speed: 50, icon: svgIcons.bike },
+                { name: "Drive / Car", speed: 65, icon: svgIcons.car },
+                { name: "Bus Route", speed: 45, icon: svgIcons.bus },
+                { name: "Train Route", speed: 75, icon: svgIcons.train },
+                { name: "Flight", speed: 700, icon: svgIcons.flight }
+            ];
+
+            formats.forEach(mode => {
+                let hours = distanceKm / mode.speed;
+                if(mode.name === "Flight") hours += 1.5; 
+
+                let timeText = "";
+                if (hours >= 24) {
+                    timeText = `${(hours / 24).toFixed(1)} Days`;
+                } else if (hours < 1) {
+                    timeText = `${Math.round(hours * 60)} Mins`;
+                } else {
+                    const h = Math.floor(hours);
+                    timeText = `${h}h ${Math.round((hours - h) * 60)}m`;
+                }
+
+                modesContainer.innerHTML += `
+                    <div class="mode-row">
+                        <span class="mode-name-box">${mode.icon} ${mode.name}</span>
+                        <span>${timeText}</span>
+                    </div>
+                `;
+            });
+
+            currentRouteGeoJSON = routeData.routes[0].geometry;
+            drawRouteOnMap();
+            setDirectionState(true);
+
+            const bounds = currentRouteGeoJSON.coordinates.reduce((b, c) => b.extend(c), new maplibregl.LngLatBounds(currentRouteGeoJSON.coordinates[0], currentRouteGeoJSON.coordinates[0]));
+            map.fitBounds(bounds, { padding: 60 });
+        } catch(e) { distDiv.textContent = "रूट गणना में विफल।"; }
+    }
+
+    function clearRoute() {
+        if (map.getLayer('route')) map.removeLayer('route');
+        if (map.getSource('route')) map.removeSource('route');
+        currentRouteGeoJSON = null;
+        document.getElementById('bottomRightResult').style.display = "none";
+        setDirectionState(false);
+    }
+
+    function setDirectionState(active) {
+        directionActive = active;
+        const iconG = document.getElementById('routeIconG');
+        const btn = document.getElementById('btnRoute');
+        if (active) {
+            btn.title = "Clear Directions";
+            iconG.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff3b30" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+        } else {
+            btn.title = "Route Mode";
+            iconG.innerHTML = `
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19v-4a4 4 0 0 1 4-4h10" />
+                    <polyline points="14 7 18 11 14 15" />
+                </svg>`;
+        }
+    }
+
+    document.getElementById('btnZoomIn').onclick = () => map.zoomIn();
+    document.getElementById('btnZoomOut').onclick = () => map.zoomOut();
+    document.getElementById('btnCompass').onclick = () => map.resetNorthPitch();
+    
+    document.getElementById('btnFull').onclick = () => {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+    };
+    
+    document.getElementById('btnLoc').onclick = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const lon = position.coords.longitude;
+                const lat = position.coords.latitude;
+                map.flyTo({ center: [lon, lat], zoom: 16.0, essential: true });
+                searchMarker.setLngLat([lon, lat]).addTo(map);
+            }, (err) => { 
+                alert("GPS अनुमति सक्षम करें।"); 
+            }, { 
+                enableHighAccuracy: true,
+                timeout: 8000, 
+                maximumAge: 0 
+            });
+        }
+    };
+
+    document.getElementById('btnRoute').onclick = () => {
+        if (directionActive) clearRoute();
+        else toggleRouteBox(true);
+    };
+    
+    document.getElementById('btn3D').onclick = (e) => {
+        const is3D = map.getPitch() > 0;
+        map.easeTo({ pitch: is3D ? 0 : 60 });
+        e.currentTarget.classList.toggle('active', !is3D);
+    };
+
+    const layersBtn = document.getElementById('btnLayers');
+    const dropdown = document.getElementById('layerDropdown');
+    layersBtn.onclick = (e) => { dropdown.classList.toggle('show'); e.stopPropagation(); };
+    
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.onclick = (e) => {
+            const targetStyle = e.currentTarget.getAttribute('data-style');
+            map.setStyle(layers[targetStyle]);
+            document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            dropdown.classList.remove('show');
+        };
+    });
+
+    window.onclick = () => dropdown.classList.remove('show');
+    document.getElementById('closePanel').onclick = () => document.getElementById('infoPanel').classList.remove('open');
+</script>
+</body>
+</html>
